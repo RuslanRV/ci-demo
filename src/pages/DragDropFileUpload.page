@@ -1,4 +1,4 @@
-<apex:page id="thePage" extensions="DragDropFileUploadController" sidebar="false" showheader="false" standardStylesheets="true" standardController="Account" >
+<apex:page id="thePage" extensions="RVDragDropFileUploadController" sidebar="false" showheader="false" standardStylesheets="true" standardController="Account" >
 
 <apex:includeScript value="{!URLFOR($Resource.UIJQuery1822, 'js/jquery-1.7.2.min.js')}"/>
 
@@ -163,7 +163,7 @@
 		    reader.onload = function(e) {
 		    	//http://stackoverflow.com/questions/7431365/filereader-readasbinarystring-to-upload-files
 		    	Visualforce.remoting.Manager.invokeAction(
-		            '{!$RemoteAction.DragDropFileUploadController.saveFile}',
+		            '{!$RemoteAction.RVDragDropFileUploadController.saveFile}',
 		            file.name,e.target.result.split(',')[1],'{!objId}',
 		            function(result, event){
 		            	var fup = null;
