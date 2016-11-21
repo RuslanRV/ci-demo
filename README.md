@@ -1,1 +1,1 @@
-CI Demo for Cloudbees.
+ci-vekua-dev Demo.
